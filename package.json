@@ -1,0 +1,23 @@
+{
+  "name": "tp_04",
+  "version": "1.0.0",
+  "description": "Les differentes couleurs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roms1512/TP_04.git"
+  },
+  "author": "Lavaur Romain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roms1512/TP_04/issues"
+  },
+  "homepage": "https://github.com/Roms1512/TP_04#readme",
+  "dependencies": {
+    "sass": "^1.32.2"
+  }
+}

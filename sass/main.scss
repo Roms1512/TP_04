@@ -6,3 +6,52 @@ $color5: #D9D4CD;
 $color6: #9E9672;
 $color7: #D9C8A2;
 $color8: #D59276;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: $color2;
+}
+
+header {
+    background: #262626;
+    color: $color2;
+    .en-tete {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            margin-left: 10%;
+        }
+        .nav-barre {
+            margin-right: 10%;
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                li {
+                    margin-left: 50px;
+                }
+                select {
+                    margin-left: 50px;
+                    color: $color5;
+                    border: none;
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .titre {
+        width: 100%;
+        margin-top: 22vh;
+        padding-bottom: 32vh;
+        text-align: center;
+    }
+}
