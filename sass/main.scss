@@ -12,15 +12,29 @@ $color8: #D59276;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+img {
+    object-fit: cover;
 }
 
 body {
-    background: $color2;
+    width: 100%;
+    background: $color5;
+    position: relative;
 }
 
 header {
-    background: #262626;
     color: $color2;
+    background: #26262671;
+    .background-header {
+        width: 100%;
+        height: 74vh;
+        position: absolute;
+        z-index: -60;
+    }
     .en-tete {
         width: 100%;
         height: 100%;
@@ -36,10 +50,16 @@ header {
                 display: flex;
                 justify-content: flex-end;
                 li {
-                    margin-left: 50px;
+                    margin-left: 20px;
+                    a {
+                        color: $color2;
+                        &:hover {
+                            color: $color5;
+                        }
+                    }
                 }
                 select {
-                    margin-left: 50px;
+                    margin-left: 20px;
                     color: $color5;
                     border: none;
                     background: none;
@@ -53,5 +73,88 @@ header {
         margin-top: 22vh;
         padding-bottom: 32vh;
         text-align: center;
+    }
+}
+
+.a-propos {
+    position: relative;
+    height: 433px;
+    display: flex;
+    justify-content: center;
+    main {
+        position: absolute;
+        background: $color2;
+        top: -20px;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: auto;
+        .image-resto-ext, .image-resto-int {
+            overflow: hidden;
+        }
+        .reservation, .image-resto-int{
+            width: 20%;
+        }
+        .image-resto-ext, .pressision-resto {
+            width: 80%;
+        }
+        .image-resto-ext, .pressision-resto, .reservation, .image-resto-int {
+            height: 31.5vh;
+        }
+    
+        .reservation {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 35px;
+            div {
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 18px;
+                }
+                p {
+                    color: $color3;
+                }
+            }
+            .button {
+                margin-top: 25px;
+                a {
+                    color: $color7;
+                    border: 1px solid $color7;
+                    padding: 8px 25px;
+                }
+            }
+        }
+        .pressision-resto {
+            .about {
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 20px;
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.part-2 {
+    position: relative;
+    .img-part-2 {
+        z-index: -50;
+        position: absolute;
+        top: -40px;
+        width: 100%;
+        height: 65vh;
+    }
+    h2 {
+        font-size: 40px;
+        height: 65vh;
+        color: $color5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -3,15 +3,29 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+img {
+  object-fit: cover;
 }
 
 body {
-  background: #FCFCFA;
+  width: 100%;
+  background: #D9D4CD;
+  position: relative;
 }
 
 header {
-  background: #262626;
   color: #FCFCFA;
+  background: #26262671;
+}
+header .background-header {
+  width: 100%;
+  height: 74vh;
+  position: absolute;
+  z-index: -60;
 }
 header .en-tete {
   width: 100%;
@@ -31,10 +45,16 @@ header .en-tete .nav-barre ul {
   justify-content: flex-end;
 }
 header .en-tete .nav-barre ul li {
-  margin-left: 50px;
+  margin-left: 20px;
+}
+header .en-tete .nav-barre ul li a {
+  color: #FCFCFA;
+}
+header .en-tete .nav-barre ul li a:hover {
+  color: #D9D4CD;
 }
 header .en-tete .nav-barre ul select {
-  margin-left: 50px;
+  margin-left: 20px;
   color: #D9D4CD;
   border: none;
   background: none;
@@ -44,6 +64,84 @@ header .titre {
   margin-top: 22vh;
   padding-bottom: 32vh;
   text-align: center;
+}
+
+.a-propos {
+  position: relative;
+  height: 433px;
+  display: flex;
+  justify-content: center;
+}
+.a-propos main {
+  position: absolute;
+  background: #FCFCFA;
+  top: -20px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.a-propos main .image-resto-ext, .a-propos main .image-resto-int {
+  overflow: hidden;
+}
+.a-propos main .reservation, .a-propos main .image-resto-int {
+  width: 20%;
+}
+.a-propos main .image-resto-ext, .a-propos main .pressision-resto {
+  width: 80%;
+}
+.a-propos main .image-resto-ext, .a-propos main .pressision-resto, .a-propos main .reservation, .a-propos main .image-resto-int {
+  height: 31.5vh;
+}
+.a-propos main .reservation {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 35px;
+}
+.a-propos main .reservation div h3 {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+.a-propos main .reservation div p {
+  color: #9B9E95;
+}
+.a-propos main .reservation .button {
+  margin-top: 25px;
+}
+.a-propos main .reservation .button a {
+  color: #D9C8A2;
+  border: 1px solid #D9C8A2;
+  padding: 8px 25px;
+}
+.a-propos main .pressision-resto .about {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+.a-propos main .pressision-resto .about h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.part-2 {
+  position: relative;
+}
+.part-2 .img-part-2 {
+  z-index: -50;
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 65vh;
+}
+.part-2 h2 {
+  font-size: 40px;
+  height: 65vh;
+  color: #D9D4CD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
