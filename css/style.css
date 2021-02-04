@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*-------------------- Variables --------------------*/
+/*-------------------- Keyframes --------------------*/
 @keyframes arrive {
   from {
     transform: translatex(-100px);
@@ -38,16 +41,14 @@
     opacity: 1;
   }
 }
+/*-------------------- Mixins --------------------*/
+/*-------------------- Page Web --------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-img {
-  object-fit: cover;
 }
 
 html {
@@ -61,10 +62,21 @@ body {
   width: 100%;
 }
 
+img {
+  object-fit: cover;
+}
+
+/*-------------------- Toute la Page --------------------*/
 .page {
   width: 80%;
   background: #fff;
   margin: auto;
+  /********** Header **********/
+  /********** Article 1 "À Propos" **********/
+  /********** Main "Sous partie 1" **********/
+  /********** Article 2 "Proposition de Menu" **********/
+  /********** Main "Sous partie 2" **********/
+  /********** Section "Menu" **********/
 }
 .page header {
   position: relative;
@@ -103,11 +115,43 @@ body {
 }
 .page header .en-tete .nav-barre ul li {
   color: #fcfcfa;
+  transition: all 0.3s;
+}
+.page header .en-tete .nav-barre ul li:hover {
+  transform: scale(1.04);
+}
+.page header .en-tete .nav-barre ul li:hover a {
+  transition: 0.3s;
+  color: #9b9e95;
+}
+.page header .en-tete .nav-barre ul li:active {
+  transition: 0s;
+  transform: scale(1);
 }
 .page header .en-tete .nav-barre ul li a {
   color: #fcfcfa;
   text-decoration: none;
   margin: 0 1rem;
+}
+.page header .en-tete .nav-barre ul .select-lang {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fcfcfa;
+  font-size: large;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.page header .en-tete .nav-barre ul .select-lang:hover {
+  transform: scale(1.04);
+}
+.page header .en-tete .nav-barre ul .select-lang:hover a {
+  transition: 0.3s;
+  color: #9b9e95;
+}
+.page header .en-tete .nav-barre ul .select-lang:active {
+  transition: 0s;
+  transform: scale(1);
 }
 .page header .en-tete .fa-bars {
   opacity: 0;

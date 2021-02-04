@@ -1,3 +1,5 @@
+/*-------------------- Variables --------------------*/
+
 $color1: #3d373f;
 $color2: #fcfcfa;
 $color3: #9b9e95;
@@ -6,6 +8,8 @@ $color5: #d9d4cd;
 $color6: #9e9672;
 $color7: #d9c8a2;
 $color8: #d59276;
+
+/*-------------------- Keyframes --------------------*/
 
 @keyframes arrive {
   from {
@@ -48,6 +52,24 @@ $color8: #d59276;
   }
 }
 
+/*-------------------- Mixins --------------------*/
+
+@mixin button {
+  &:hover {
+    transform: scale(1.04);
+    a {
+      transition: 0.3s;
+      color: $color3;
+    }
+  }
+  &:active {
+    transition: 0s;
+    transform: scale(1);
+  }
+}
+
+/*-------------------- Page Web --------------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -55,10 +77,6 @@ $color8: #d59276;
   list-style-type: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-img {
-  object-fit: cover;
 }
 
 html {
@@ -74,15 +92,24 @@ body {
   width: 100%;
 }
 
+img {
+  object-fit: cover;
+}
+
+/*-------------------- Toute la Page --------------------*/
+
 .page {
   width: 80%;
   background: #fff;
   margin: auto;
-  // En tête
+
+  /********** Header **********/
   header {
     position: relative;
     height: 100vh;
     z-index: 10;
+
+    //* Image de fond *//
     .back {
       position: absolute;
       top: 0;
@@ -90,6 +117,8 @@ body {
       height: 100%;
       z-index: -10;
     }
+
+    //* Barre de Navigation *//
     .en-tete {
       z-index: 11;
       padding: 0 2%;
@@ -112,11 +141,24 @@ body {
           align-items: center;
           li {
             color: $color2;
+            transition: all 0.3s;
+            @include button();
             a {
               color: $color2;
               text-decoration: none;
               margin: 0 1rem;
             }
+          }
+
+          .select-lang {
+            outline: none;
+            border: none;
+            background: transparent;
+            color: $color2;
+            font-size: large;
+            margin-left: 5px;
+            cursor: pointer;
+            @include button();
           }
         }
       }
@@ -139,6 +181,8 @@ body {
         }
       }
     }
+
+    //* Grand Titre *//
     .titre {
       color: $color2;
       width: 100%;
@@ -159,7 +203,7 @@ body {
     }
   }
 
-  // À propos
+  /********** Article 1 "À Propos" **********/
   article {
     position: relative;
     background: darken($color: $color2, $amount: 1);
@@ -175,14 +219,20 @@ body {
       position: absolute;
       justify-content: center;
       top: -2vh;
+
+      //* Premiere ligne "Réservation  -  Image 1" *//
       .reservation,
       .image-resto-int {
         width: 30%;
       }
+
+      //* Seconde ligne "Image 2  -  Précision" *//
       .image-resto-ext,
       .pressision-resto {
         width: 70%;
       }
+
+      //* Text "Réservation  -  Précision *//
       .reservation,
       .pressision-resto {
         overflow: hidden;
@@ -200,6 +250,8 @@ body {
           font-size: small;
         }
       }
+
+      //* Image *//
       .image-resto-ext,
       .image-resto-int {
         height: 220px;
@@ -209,6 +261,9 @@ body {
           width: 100%;
         }
       }
+
+      //* Réservation *//
+
       .reservation {
         .button {
           margin-top: 20px;
@@ -223,12 +278,13 @@ body {
     }
   }
 
-  // deuxieme partie
-  // main 1
+  /********** Main "Sous partie 1" **********/
   .part-2 {
     height: 40vh;
     width: 100%;
     position: relative;
+
+    //* Titre *//
     .petit {
       position: absolute;
       top: 20%;
@@ -236,6 +292,8 @@ body {
       color: $color2;
       font-size: xx-large;
     }
+
+    //* Image de fond *//
     img {
       z-index: -500;
       width: 100%;
@@ -243,16 +301,19 @@ body {
     }
   }
 
-  // proposition menu
+  /********** Article 2 "Proposition de Menu" **********/
   article.proposition {
     height: 400px;
     main {
+      //* Menu "Texts  -  Images" *//
       .menu-txt,
       .menu-img {
         overflow: hidden;
         width: 25%;
         height: 220px;
       }
+
+      //* Menu "Textes" *//
       .menu-txt {
         background: #fff;
         text-align: center;
@@ -270,6 +331,8 @@ body {
           color: $color7;
         }
       }
+
+      //* Menu "Images" *//
       .menu-img {
         img {
           width: 100%;
@@ -279,17 +342,19 @@ body {
     }
   }
 
-  // image
+  /********** Main "Sous partie 2" **********/
   .image-transition {
     width: 100%;
     height: 40vh;
+
+    //* Image de fond *//
     img {
       height: 100%;
       width: 100%;
     }
   }
 
-  // menu
+  /********** Section "Menu" **********/
   .menu {
     width: 100%;
     height: 100%;
@@ -297,24 +362,34 @@ body {
     justify-content: center;
     overflow: hidden;
     position: relative;
+
+    //* Images PNG *//
     img {
       position: absolute;
       height: 250px;
     }
+
+    //* Image PNG "Pizza" *//
     .png-pizza {
       top: 180px;
       left: -60px;
       transform: rotate(-45deg);
     }
+
+    //* Image PNG "Spagetti" *//
     .png-spagetti {
       right: -100px;
       transform: rotate(65deg);
     }
+
+    //* Image PNG "Sandwich" *//
     .png-sandwich {
       bottom: 150px;
       right: -190px;
       transform: rotate(-25deg);
     }
+
+    //* Carte Des Menus *//
     .fiche-menu {
       width: 60%;
       text-align: center;
