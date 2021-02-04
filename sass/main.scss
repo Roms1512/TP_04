@@ -1,160 +1,365 @@
-$color1: #3D373F;
-$color2: #FCFCFA;
-$color3: #9B9E95;
+$color1: #3d373f;
+$color2: #fcfcfa;
+$color3: #9b9e95;
 $color4: #996350;
-$color5: #D9D4CD;
-$color6: #9E9672;
-$color7: #D9C8A2;
-$color8: #D59276;
+$color5: #d9d4cd;
+$color6: #9e9672;
+$color7: #d9c8a2;
+$color8: #d59276;
+
+@keyframes arrive {
+  from {
+    transform: translatex(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes arriver {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes arrivers {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  from {
+    transform: translate(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 img {
-    object-fit: cover;
+  object-fit: cover;
+}
+
+html {
+  background: url(../images/Images/4.jpg) no-repeat center center/cover,
+    url(../images/Images/6.jpg) no-repeat center center/cover,
+    url(../images/Images/8.jpg) no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    width: 100%;
-    background: $color5;
-    position: relative;
+  background-color: #8e8e8ebb;
+  width: 100%;
 }
 
-header {
-    color: $color2;
-    background: #26262671;
-    .background-header {
-        width: 100%;
-        height: 74vh;
-        position: absolute;
-        z-index: -60;
+.page {
+  width: 80%;
+  background: #fff;
+  margin: auto;
+  // En tête
+  header {
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+    .back {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
     }
     .en-tete {
-        width: 100%;
-        height: 100%;
+      z-index: 11;
+      padding: 0 2%;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        z-index: 10;
+        width: 100px;
+        filter: invert(1);
+        animation: 0.8s ease-out 0.5s arrive;
+      }
+      .nav-barre {
+        width: 80%;
+        height: 10vh;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .logo {
-            margin-left: 10%;
-        }
-        .nav-barre {
-            margin-right: 10%;
-            ul {
-                display: flex;
-                justify-content: flex-end;
-                li {
-                    margin-left: 20px;
-                    a {
-                        color: $color2;
-                        &:hover {
-                            color: $color5;
-                        }
-                    }
-                }
-                select {
-                    margin-left: 20px;
-                    color: $color5;
-                    border: none;
-                    background: none;
-                }
+        justify-content: flex-end;
+        animation: 1.2s ease-out 0.8s pop;
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            color: $color2;
+            a {
+              color: $color2;
+              text-decoration: none;
+              margin: 0 1rem;
             }
+          }
         }
-    }
+      }
+      .fa-bars {
+        opacity: 0;
+        color: $color2;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+      }
 
+      @media screen and(max-width:1024px) {
+        .nav-barre {
+          display: none;
+        }
+        .fa-bars {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
     .titre {
-        width: 100%;
-        margin-top: 22vh;
-        padding-bottom: 32vh;
-        text-align: center;
+      color: $color2;
+      width: 100%;
+      height: 50vh;
+      text-align: center;
+      position: absolute;
+      top: 40vh;
+      h1 {
+        font-size: 100px;
+        font-family: "Dancing Script", cursive;
+        transition: 0.3s;
+        animation: 0.8s ease-out 0.5s arriver;
+      }
+      h2 {
+        font-size: 50px;
+        animation: 0.8s ease-out 0.8s arrivers;
+      }
     }
-}
+  }
 
-.a-propos {
+  // À propos
+  article {
     position: relative;
-    height: 433px;
+    background: darken($color: $color2, $amount: 1);
+    height: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     main {
-        position: absolute;
-        background: $color2;
-        top: -20px;
-        width: 80%;
-        height: 100%;
-        display: flex;
+      z-index: 100;
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      justify-content: center;
+      top: -2vh;
+      .reservation,
+      .image-resto-int {
+        width: 30%;
+      }
+      .image-resto-ext,
+      .pressision-resto {
+        width: 70%;
+      }
+      .reservation,
+      .pressision-resto {
+        overflow: hidden;
+        background: #fff;
+        padding: 30px;
         text-align: center;
-        flex-wrap: wrap;
-        margin: auto;
-        .image-resto-ext, .image-resto-int {
-            overflow: hidden;
+        height: 220px;
+        h3 {
+          font-family: "Dancing Script", cursive;
+          font-size: xx-large;
+          margin-bottom: 20px;
         }
-        .reservation, .image-resto-int{
-            width: 20%;
+        p {
+          color: $color3;
+          font-size: small;
         }
-        .image-resto-ext, .pressision-resto {
-            width: 80%;
+      }
+      .image-resto-ext,
+      .image-resto-int {
+        height: 220px;
+        .img-resto-ext,
+        .img-resto-int {
+          height: 100%;
+          width: 100%;
         }
-        .image-resto-ext, .pressision-resto, .reservation, .image-resto-int {
-            height: 31.5vh;
+      }
+      .reservation {
+        .button {
+          margin-top: 20px;
+          a {
+            padding: 5px 20px;
+            border: 1px solid $color7;
+            color: $color7;
+            text-decoration: none;
+          }
         }
-    
-        .reservation {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 35px;
-            div {
-                h3 {
-                    font-size: 30px;
-                    margin-bottom: 18px;
-                }
-                p {
-                    color: $color3;
-                }
-            }
-            .button {
-                margin-top: 25px;
-                a {
-                    color: $color7;
-                    border: 1px solid $color7;
-                    padding: 8px 25px;
-                }
-            }
-        }
-        .pressision-resto {
-            .about {
-                padding-left: 50px;
-                padding-right: 50px;
-                padding-top: 20px;
-                h3 {
-                    font-size: 30px;
-                    margin-bottom: 20px;
-                }
-            }
-        }
+      }
     }
-}
+  }
 
-.part-2 {
+  // deuxieme partie
+  // main 1
+  .part-2 {
+    height: 40vh;
+    width: 100%;
     position: relative;
-    .img-part-2 {
-        z-index: -50;
-        position: absolute;
-        top: -40px;
-        width: 100%;
-        height: 65vh;
+    .petit {
+      position: absolute;
+      top: 20%;
+      left: 45%;
+      color: $color2;
+      font-size: xx-large;
     }
-    h2 {
-        font-size: 40px;
-        height: 65vh;
+    img {
+      z-index: -500;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // proposition menu
+  article.proposition {
+    height: 400px;
+    main {
+      .menu-txt,
+      .menu-img {
+        overflow: hidden;
+        width: 25%;
+        height: 220px;
+      }
+      .menu-txt {
+        background: #fff;
+        text-align: center;
+        padding: 30px;
+        h3 {
+          margin-bottom: 20px;
+          font-size: medium;
+        }
+        p {
+          font-size: small;
+          color: $color3;
+        }
+        .info-prix {
+          margin-top: 50px;
+          color: $color7;
+        }
+      }
+      .menu-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // image
+  .image-transition {
+    width: 100%;
+    height: 40vh;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  // menu
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      height: 250px;
+    }
+    .png-pizza {
+      top: 180px;
+      left: -60px;
+      transform: rotate(-45deg);
+    }
+    .png-spagetti {
+      right: -100px;
+      transform: rotate(65deg);
+    }
+    .png-sandwich {
+      bottom: 150px;
+      right: -190px;
+      transform: rotate(-25deg);
+    }
+    .fiche-menu {
+      width: 60%;
+      text-align: center;
+      h2 {
+        font-family: "Dancing Script", cursive;
+        margin: 50px 0;
+        font-size: xxx-large;
+      }
+      .plats,
+      .desserts {
         color: $color5;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      .plat-principal,
+      .dessert-principale {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        .colonne {
+          position: relative;
+          text-align: left;
+          width: 50%;
+          .plat,
+          .dessert {
+            display: flex;
+            .intituler {
+              width: 60%;
+              padding-bottom: 30px;
+              h3 {
+                font-size: medium;
+                margin-bottom: 10px;
+              }
+              p {
+                font-size: small;
+                color: $color5;
+              }
+            }
+            & > p {
+              color: $color7;
+              font-size: xx-large;
+              font-family: "Dancing Script", cursive;
+            }
+          }
+        }
+      }
     }
+  }
 }

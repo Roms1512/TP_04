@@ -1,229 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Faicco's - Restorant</title>
 
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <!-- premiere partie -->
-    <!-- en tête -->
-    <header>
-        <img src="./images/Images/pexels-maria-orlova-4940719.jpg" alt="" class="background-header">
-        <div class="en-tete">
-            <img src="./images/Images/pexels-ash-376463.jpg" width="100" alt="" class="logo">
-            <nav class="nav-barre">
-                <ul>
-                    <li><a href="#">SHOP</a></li>
-                    <li>&middot;</li>
-                    <li><a href="#">RECIPES</a></li>
-                    <li>&middot;</li>
-                    <li><a href="#">NEWS</a></li>
-                    <li>&middot;</li>
-                    <li><a href="#">ABOUT FAICCO'S</a></li>
-                    <li>&middot;</li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li>&middot;</li>
-                    <select name="" id="" class="select-lang">
-                        <option value="anglais">EN</option>
-                        <option value="francais">FR</option>
-                    </select>
-                </ul>
-            </nav>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- premiere partie -->
+      <!-- en tête -->
+      <header>
+        <img src="./images/Images/4.jpg" class="back" alt="" />
+
+        <div class="en-tete rellax" data-rellax-speed="-6">
+          <img src="./images/Images/logo.png" alt="" class="logo" />
+          <nav class="nav-barre">
+            <ul>
+              <li><a href="#">SHOP</a></li>
+              <li>&middot;</li>
+              <li><a href="#">RECIPES</a></li>
+              <li>&middot;</li>
+              <li><a href="#">NEWS</a></li>
+              <li>&middot;</li>
+              <li><a href="#">ABOUT FAICCO'S</a></li>
+              <li>&middot;</li>
+              <li><a href="#">CONTACT</a></li>
+              <li>&middot;</li>
+              <select name="" id="" class="select-lang">
+                <option value="anglais">EN</option>
+                <option value="francais">FR</option>
+              </select>
+            </ul>
+          </nav>
+          <i
+            class="fas fa-bars"
+            data-aos="zoom-in-left"
+            data-aos-delay="50"
+            data-aos-duration="1700"
+            data-aos-once="true"
+          ></i>
         </div>
 
-        <div class="titre">
-            <h1>Faicco's</h1>
-            <h2>ITALIAN SPECIALITIES</h2>
+        <div class="titre rellax" data-rellax-speed="-4">
+          <h1>Faicco's</h1>
+          <h2>ITALIAN SPECIALITIES</h2>
         </div>
-    </header>
+      </header>
 
-    <!-- à propos -->
-    <article class="a-propos">
+      <!-- à propos -->
+      <article class="a-propos">
         <main>
-            <div class="reservation">
-                <div>
-                    <h3>Reservations</h3>
-                    <p>call us to booka table in our restaurant. Calis must be in the same days as the reservation.</p>
-                </div>
-                <div class="button">
-                    <a href="#">Book a Table</a>
-                </div>
+          <div
+            class="reservation"
+            data-aos="zoom-in-right"
+            data-aos-delay="100"
+            data-aos-once="true"
+          >
+            <h3>Reservations</h3>
+            <p>
+              call us to booka table in our restaurant. Calis must be in the
+              same days as the reservation.
+            </p>
+            <div class="button">
+              <a href="#">Book a Table</a>
             </div>
-            <div class="image-resto-ext">
-                <img src="./images/Images/pexels-pixabay-534151.jpg"  alt="representation du restaurant" class="img-resto-ext" width="100%">
+          </div>
+          <div
+            class="image-resto-ext"
+            data-aos="zoom-in-left"
+            data-aos-delay="300"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <img
+              src="./images/Images/3.jpg"
+              alt="representation du restaurant"
+              class="img-resto-ext"
+            />
+          </div>
+
+          <div
+            class="image-resto-int"
+            data-aos="zoom-in-right"
+            data-aos-delay="300"
+            data-aos-duration="800"
+            data-aos-once="true"
+          >
+            <img
+              src="./images/Images/2.jpg"
+              alt="représentation de l'interieur du restaurant"
+              class="img-resto-int"
+            />
+          </div>
+
+          <div
+            class="pressision-resto"
+            data-aos="zoom-in-left"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <div class="about">
+              <h3>About</h3>
+              <p>
+                FAICCO'S Restaurant was opened by award winning Chel Luciano
+                Canova to ofter residents and visitors of southerm Brooklyn with
+                the authentic italian cuisine that the Faicco's name has become
+                synonymous with after the success of the Faicco's restaurant in
+                Las Vegas. The restaurant now has a loyal following of it's own,
+                offering traditionnal Roman recipes passed down from Chef
+                Luciano's family. as well as inventive Northerm and Southerm
+                itailian preparations inspired by Chef Luciano's culiriary
+                education and travels.
+              </p>
             </div>
-            <div class="image-resto-int">
-                <img src="./images/Images/pexels-recal-media-97815.jpg" alt="représentation de l'interieur du restaurant" class="img-resto-int" width="120%">
-            </div>
-            <div class="pressision-resto">
-                <div class="about">
-                    <h3>About</h3>
-                    <p>FAICCO'S Restaurant was opened by award winning Chel Luciano Canova to ofter residents and visitors of southerm Brooklyn with the authentic italian cuisine that the Faicco's name has become synonymous with after the success of the Faicco's restaurant in Las Vegas. The restaurant now has a loyal following of it's own, offering traditionnal Roman recipes passed down from Chef Luciano's family. as well as inventive Northerm and Southerm itailian preparations inspired by Chef Luciano's culiriary education and travels.</p>
-                </div>
-            </div>
+          </div>
         </main>
-    </article>
+      </article>
 
-    <!-- deuxieme partie -->
-    <!-- main 1 -->
-    <main class="part-2">
-        <img src="./images/Images/pexels-rachel-claire-4819711.jpg" alt="" class="img-part-2">
-        <h2>Our Specialities</h2>
-    </main>
+      <!-- deuxieme partie -->
+      <!-- main 1 -->
+      <main class="part-2">
+        <h2 class="petit rellax" data-rellax-speed="-1">Our Specialities</h2>
+        <img src="./images/Images/6.jpg" alt="" />
+      </main>
 
-
-    <article>
+      <!-- Proposition menu -->
+      <article class="proposition">
         <main>
-            <div>
-                <h3>LASAGNA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quisquam ratione</p>
-                <p>FROM $15.40</p>
-            </div>
-            <div>
-                <img src="./images/Images/pexels-ash-376464.jpg" alt="" width="500">
-            </div>
-            <div>
-                <h3>EGGPLANT PARMIGIANA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quisquam ratione</p>
-                <p>FROM $15.40</p>
-            </div>
-            <div>
-                <img src="./images/Images/pexels-daria-shevtsova-735280.jpg" width="500" alt="">
-            </div>
-            <div>
-                <img src="./images/Images/pexels-daria-shevtsova-704569.jpg" width="500" alt="">
-            </div>
-            <div>
-                <h3>BARICOLE</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quisquam ratione</p>
-                <p>FROM $15.40</p>
-            </div>
-            <div>
-                <img src="./images/Images/pexels-ash-376463.jpg" width="500" alt="">
-            </div>
-            <div>
-                <h3>SPAGHETTI WITH MEATBALLS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quisquam ratione</p>
-                <p>FROM $15.40</p>
-            </div>
+          <!-- txt lasagne -->
+          <div
+            class="menu-txt"
+            data-aos="zoom-in-right"
+            data-aos-delay="300"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <h3>LASAGNA</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              quisquam ratione
+            </p>
+            <p class="info-prix">FROM $15.40</p>
+          </div>
+
+          <!-- img baricole -->
+          <div
+            class="menu-img"
+            data-aos="fade-down"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <img src="./images/Images/7.jpg" alt="" />
+          </div>
+
+          <!-- txt egg -->
+          <div
+            class="menu-txt"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <h3>EGGPLANT PARMIGIANA</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              quisquam ratione
+            </p>
+            <p class="info-prix">FROM $15.40</p>
+          </div>
+
+          <!-- img spaghetti -->
+          <div
+            class="menu-img"
+            data-aos="zoom-in-left"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <img src="./images/Images/8.jpg" alt="" />
+          </div>
+
+          <!-- img lasagne -->
+          <div
+            class="menu-img"
+            data-aos="zoom-in-right"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <img src="./images/Images/5.jpg" alt="" />
+          </div>
+
+          <!-- txt baricole -->
+          <div
+            class="menu-txt"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <h3>BARICOLE</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              quisquam ratione
+            </p>
+            <p class="info-prix">FROM $15.40</p>
+          </div>
+
+          <!-- img egg -->
+          <div
+            class="menu-img"
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <img src="./images/Images/1.jpg" alt="" />
+          </div>
+
+          <!-- txt spaghetti -->
+          <div
+            class="menu-txt"
+            data-aos="zoom-in-left"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <h3>SPAGHETTI WITH MEATBALLS</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              quisquam ratione
+            </p>
+            <p class="info-prix">FROM $15.40</p>
+          </div>
         </main>
-    </article>
+      </article>
 
+      <!-- image -->
+      <main class="image-transition">
+        <img src="./images/Images/8.jpg" alt="" />
+      </main>
 
-    <main>
-
-    </main>
-
-
-    <section class="menu">
+      <!-- menu -->
+      <section class="menu">
+        <img
+          src="./images/png/pizza.png"
+          class="png-pizza"
+          alt=""
+          data-aos="fade-down-right"
+          data-aos-delay="100"
+          data-aos-duration="700"
+          data-aos-once="true"
+        />
+        <img
+          src="./images/png/spagetti.png"
+          class="png-spagetti"
+          alt=""
+          data-aos="fade-down-left"
+          data-aos-delay="500"
+          data-aos-duration="700"
+          data-aos-once="true"
+        />
+        <img
+          src="./images/png/sandwich.png"
+          class="png-sandwich"
+          alt=""
+        />
         <main class="fiche-menu">
+          <h2>Menu</h2>
 
-            <h2>Menu</h2>
-            <p>FOOD & APERITIVES</p>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <h3>PIZZA MEXICANA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>PIZZA QUATRO STAGIONI</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>PIZZA QUATRO FORMAGI</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>PIZZA CARNIVORA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
+          <!-- plat -->
+          <p class="plats">FOOD & APERITIVES</p>
+          <div class="plat-principal">
+            <!-- colone 1 -->
+            <div class="colonne">
+              <!-- plat 1 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-right"
+                data-aos-delay="100"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>PIZZA MEXICANA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
                 </div>
-                
-                <div>
-                    <div>
-                        <div>
-                            <h3>LASAGNA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>LASAGNA NAPOLITANA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>OTHER LASAGNA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
+                <p>$17</p>
+              </div>
+
+              <!-- plat 2 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-left"
+                data-aos-delay="200"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>PIZZA QUATRO STAGIONI</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
                 </div>
+                <p>$17</p>
+              </div>
+
+              <!-- plat 3 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-right"
+                data-aos-delay="300"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>PIZZA QUATRO FORMAGI</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+
+              <!-- plat 4 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-left"
+                data-aos-delay="400"
+                data-aos-duration="700"
+                data-aos-once="true"
+                data-aos-offset="10"
+              >
+                <div class="intituler">
+                  <h3>PIZZA CARNIVORA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
             </div>
-            
-            <p>DESSERTS</p>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <h3>TIRAMISU</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>PIZZELLES</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>SICILIAN RICOTTA</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
+
+            <!-- colonne 2 -->
+            <div class="colonne">
+              <!-- plat 5 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-left"
+                data-aos-delay="150"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>LASAGNA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
                 </div>
-                
-                <div>
-                    <div>
-                        <div>
-                            <h3>CANNOLI</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>DOUBLE CHOCO BISCOTTI</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam debitis aliquid ut -----------------</p>
-                        </div>
-                        <p>$ 17</p>
-                    </div>
+                <p>$17</p>
+              </div>
+
+              <!-- plat 6 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-right"
+                data-aos-delay="250"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>LASAGNA NAPOLITANA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
                 </div>
+                <p>$17</p>
+              </div>
+
+              <!-- plat 7 -->
+              <div
+                class="plat"
+                data-aos="zoom-in-right"
+                data-aos-delay="350"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>OTHER LASAGNA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
             </div>
+          </div>
+
+          <!-- dessert -->
+          <p class="desserts">DESSERTS</p>
+          <div class="dessert-principale">
+            <!-- colonne 1 -->
+            <div class="colonne">
+              <!-- dessert 1 -->
+              <div
+                class="dessert"
+                data-aos="zoom-in-right"
+                data-aos-delay="150"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>TIRAMISU</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+
+              <!-- dessert 2 -->
+              <div
+                class="dessert"
+                data-aos="zoom-in-left"
+                data-aos-delay="250"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>PIZZELLES</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+
+              <!-- dessert 3 -->
+              <div
+                class="dessert"
+                data-aos="zoom-in-right"
+                data-aos-delay="350"
+                data-aos-duration="700"
+                data-aos-once="true"
+                data-aos-offset="50"
+              >
+                <div class="intituler">
+                  <h3>SICILIAN RICOTTA</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+            </div>
+
+            <!-- colonne 2 -->
+            <div class="colonne">
+              <!-- dessert 4 -->
+              <div
+                class="dessert"
+                data-aos="zoom-in-left"
+                data-aos-delay="100"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>CANNOLI</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+
+              <!-- dessert 5 -->
+              <div
+                class="dessert"
+                data-aos="zoom-in-right"
+                data-aos-delay="200"
+                data-aos-duration="700"
+                data-aos-once="true"
+              >
+                <div class="intituler">
+                  <h3>DOUBLE CHOCO BISCOTTI</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magnam debitis aliquid ut -----------------
+                  </p>
+                </div>
+                <p>$17</p>
+              </div>
+            </div>
+          </div>
         </main>
-    </section>
-</body>
+      </section>
+    </main>
+
+    <script src="./node_modules/rellax/rellax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      var rellax = new Rellax(".rellax");
+    </script>
+  </body>
 </html>
